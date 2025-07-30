@@ -1,6 +1,6 @@
 # Lab 1 - Welcome to CMPUT 201
 
-This lab exercise is not going to be marked, but students should practice all parts before __11:59pm, September 15, 2024__. They are essential to work on the future lab exercises for marks.
+This lab exercise is due before __11:59pm, September 21, 2025__. This lab is essential to work on the future lab exercises.
 <hr>
 
 Welcome to CMPUT201! We're happy to have you here! 
