@@ -63,15 +63,16 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -P ""
 
 Now use a text editor to open your ssh `config` file, for example `code $env:USERPROFILE\.ssh\config` for VS Code on Windows.
 Here you'll need to copy/paste the below text. 
-Replace `<ccid>` with your ccid (the thing in front of @ualberta.ca for your email), and replace `<num>` with a number between `01` and `34` (two digits; we recommend `(student id) mod 34 + 1` to balance out among all students).
+Replace `<ccid>` with your ccid (the thing in front of @ualberta.ca for your email), and replace `<num>` with a number between `00` and `33` (two digits; we recommend `(student id) mod 34` to balance out among all students).
 
 ```sshconfig
 Host lab
+    Hostname ucomm-2086-<num>.cs.ualberta.ca
     Port 22
     User <ccid>
-    Hostname ug<num>.cs.ualberta.ca
     IdentityFile=~/.ssh/id_ed25519
     IdentitiesOnly=yes
+    ProxyJump <ccid>@ohaton.cs.ualberta.ca
 ```
 
 **In this and all following steps, make sure to replace `<ccid>` and `<num>` __including__ the characters `<` and `>`.**
@@ -79,11 +80,12 @@ For example, if your CCID is `johndoe` and your desired number is `01`, your con
 
 ```sshconfig
 Host lab
+    Hostname ucomm-2086-00.cs.ualberta.ca
     Port 22
     User johndoe
-    Hostname ug01.cs.ualberta.ca
     IdentityFile=~/.ssh/id_ed25519
     IdentitiesOnly=yes
+    ProxyJump johndoe@ohaton.cs.ualberta.ca
 ```
 
 Note that if you're experiencing issues connecting, try changing the `<num>` in this file. 
@@ -521,4 +523,5 @@ You should `git push` after every commit, to make sure you don't forget to do so
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
 Make sure you push everything to your GitHub repository by the deadline.
+
 
