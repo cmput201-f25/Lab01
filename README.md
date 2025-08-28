@@ -76,7 +76,7 @@ Host lab
 ```
 
 **In this and all following steps, make sure to replace `<ccid>` and `<num>` __including__ the characters `<` and `>`.**
-For example, if your CCID is `johndoe` and your desired number is `01`, your config should look like:
+For example, if your CCID is `johndoe` and your desired number is `00`, your config should look like:
 
 ```sshconfig
 Host lab
@@ -523,5 +523,6 @@ You should `git push` after every commit, to make sure you don't forget to do so
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
 Make sure you push everything to your GitHub repository by the deadline.
+
 
 
