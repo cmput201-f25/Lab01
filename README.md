@@ -13,7 +13,7 @@ The tools we introduce to you here will be ones you will use in any programming-
 We hope that you can get comfortable using these tools throughout this year. 
 For now though, this lab serves as a simple introduction.
 
-If you need any help with the lab, please don't hesitate to email the TAs, attend *any* lab section (not just your own), or come to one of the TA office hours (Tuesdays and Thursdays, 11:00am - 2:00pm, @UCOMM 3-480). 
+If you need any help with the lab, please don't hesitate to email the TAs, attend *any* lab section (not just your own), or come to one of the TA office hours (Tuesdays and Thursdays, 11:00am - 2:00pm, usually @UCOMM 4-450, see Canvas for exceptions).
 
 ## Important Distinctions between Unix and Windows
 
@@ -113,30 +113,30 @@ Now we need to run the following command, where you once again need to replace `
 **Windows (PowerShell):**
 ```
 cd ~
-cat .\.ssh\id_ed25519.pub | ssh <user>@ug<num>.cs.ualberta.ca "cat >> ~/.ssh/authorized_keys"
+cat .\.ssh\id_ed25519.pub | ssh -J <ccid>@ohaton.cs.ualberta.ca <ccid>@ucomm-2086-w<num>.cs.ualberta.ca "cat >> ~/.ssh/authorized_keys"
 ```
 **MacOS/Linux:**
 ```bash
-ssh-copy-id -i ~/.ssh/id_ed25519.pub <ccid>@ug<num>.cs.ualberta.ca
+ssh-copy-id -o ProxyJump=<ccid>@ohaton.cs.ualberta.ca -i ~/.ssh/id_ed25519.pub <ccid>@ucomm-2086-w<num>.cs.ualberta.ca
 ```
 
 **Continue for both Windows AND MacOS/Linux**
 
-You might see something like the below. In this case type `yes` and hit enter.
+You might see something like the below. In this case type `yes` and hit enter. If it appears more than once, type `yes` each time.
 
 ```
-The authenticity of host 'ug27.cs.ualberta.ca (129.128.29.63)' can't be established.
-ED25519 key fingerprint is SHA256:o3LbTXb16zGX3rGy9Xl1qF9eigRMYLWlsXTG6ACt3L8.
+The authenticity of host 'ohaton.cs.ualberta.ca (129.128.243.70)' can't be established.
+ED25519 key fingerprint is SHA256:SeHT9JqaLhpEpec6WXLYs9P1L3P75AWNav4e7b8GmpU.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-Next it'll ask for your password. Type in the same password you use for eClass, but notice that the cursor won't move while typing (it's a security measure).
+Next it'll ask for your password. Type in the same password you use for Canvas, but notice that the cursor won't move while typing (it's a security measure). You may be prompted to type your password several times.
 
 Some students may encounter an error "no such file or directory". 
 IF this is the case, execute the following (replacing `<ccid>` and `<num>` again):
 ```
-ssh <ccid>@ug<num>.cs.ualberta.ca "mkdir .ssh"
+ssh -J <ccid>@ohaton.cs.ualberta.ca <ccid>@ucomm-2086-w<num>.cs.ualberta.ca "mkdir .ssh"
 ```
 Then repeat the steps above starting from the "Copying the SSH Key" heading.
 
@@ -239,7 +239,7 @@ You can connect to GitHub from your local machine, but we recommend that you use
 `ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -P ""`
 
 9. The lab terminal, run `cat ~/.ssh/id_ed25519.pub`
-10. Copy the output of that command. It should look something like `ssh-ed25519 jdi31aclAkaafnA81uweAnABSj ccid@ugXX` (except the middle random characters portion will be longer and `ccid@ugXX` will be your username and device name)
+10. Copy the output of that command. It should look something like `ssh-ed25519 jdi31aclAkaafnA81uweAnABSj ccid@ucomm-2086-wXX` (except the middle random characters portion will be longer and `ccid@ucomm-2086-wXX` will be your username and device name)
 11. Then paste it into the "Key" section back in the "Add new SSH Key" Menu
 12. Finally, click "Add SSH Key"
 13. Open up `~/.ssh/config` in a text editor and paste the following at the bottom, then save and close the file:
@@ -518,7 +518,7 @@ git push
 ```
 
 Remember to do this before the deadline! 
-Just like eClass, anything submitted after the deadline is late and won't be marked.
+Just like Canvas, anything submitted after the deadline is late and won't be marked.
 You should `git push` after every commit, to make sure you don't forget to do so before the deadline.
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
