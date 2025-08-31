@@ -67,7 +67,7 @@ Replace `<ccid>` with your ccid (the thing in front of @ualberta.ca for your ema
 
 ```sshconfig
 Host lab
-    Hostname ucomm-2086-<num>.cs.ualberta.ca
+    Hostname ucomm-2086-w<num>.cs.ualberta.ca
     Port 22
     User <ccid>
     IdentityFile=~/.ssh/id_ed25519
@@ -80,7 +80,7 @@ For example, if your CCID is `johndoe` and your desired number is `00`, your con
 
 ```sshconfig
 Host lab
-    Hostname ucomm-2086-00.cs.ualberta.ca
+    Hostname ucomm-2086-w00.cs.ualberta.ca
     Port 22
     User johndoe
     IdentityFile=~/.ssh/id_ed25519
@@ -523,6 +523,7 @@ You should `git push` after every commit, to make sure you don't forget to do so
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
 Make sure you push everything to your GitHub repository by the deadline.
+
 
 
 
