@@ -19,7 +19,7 @@ If you need any help with the lab, please don't hesitate to email the TAs, atten
 
 Our course is aimed to teach you programming in Unix/Linux environment (some Unix based operating systems include MacOS, any Linux distribution, etc), not in Windows. 
 We recognize that many students aren't ready to switch to Linux at this stage, so you can still use Windows machines for this course. 
-Nevertheless, all the code you write __MUST be run on the lab machines__ (which are ucomm-2086-wXX.cs.ualberta.ca, where XX ranges from 00 to 33).
+Nevertheless, all the code you write __MUST be run on the lab machines__ (which are ucomm-2086-wXX.cs.ualberta.ca, where XX ranges from 00 to 33; for security reasons, you are not able to directly ssh into these machines, but through ohaton or UofA VPN, details see below and will be demoed in class).
 __NEVER use the "play" button__ on VS Code (especially any extensions that claim to run C code for you), that's a fast-track to __getting a 0__ in the labs. 
 There will be no exceptions for this, your code must run perfectly on the lab machines (which use Linux), since that's where all the marking will be done.
 
@@ -523,3 +523,4 @@ You should `git push` after every commit, to make sure you don't forget to do so
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
 Make sure you push everything to your GitHub repository by the deadline.
+
