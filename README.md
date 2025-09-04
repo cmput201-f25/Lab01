@@ -122,7 +122,7 @@ ssh-copy-id -o ProxyJump=<ccid>@ohaton.cs.ualberta.ca -i ~/.ssh/id_ed25519.pub <
 
 **Continue for both Windows AND MacOS/Linux**
 
-You might see something like the below. In this case type `yes` and hit enter. If it appears more than once, type `yes` each time.
+You might see something like the below. In this case type `yes` and hit enter. If it appears more than once, type `yes` each time. When you type `yes`, it may not appear as you type. It will still work however.
 
 ```
 The authenticity of host 'ohaton.cs.ualberta.ca (129.128.243.70)' can't be established.
@@ -523,4 +523,5 @@ You should `git push` after every commit, to make sure you don't forget to do so
 
 That's it! Thank you for bearing with us through this lengthy starter lab. 
 Make sure you push everything to your GitHub repository by the deadline.
+
 
